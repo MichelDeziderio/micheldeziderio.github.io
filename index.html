@@ -1,571 +1,310 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michel Deziderio | Senior Software Engineer</title>
   <meta name="description"
-    content="Michel Deziderio, Portfólio, Trabalhos, Wordpress, HTML5, CSS3, Javascript, JS, JQuery, Git, Developer, Desenvolvedor Front-End, Back-End, Artigos, Desenvolvimento de Templates, Criação de Sites.">
-  <meta name="author" content="Michel Deziderio - Desenvolvedor Front-End">
+    content="Portfólio de Michel Deziderio, Senior Software Engineer especializado em Angular, TypeScript, UI Engineering e SaaS." />
 
+  <!-- Meta details -->
+  <meta name="author" content="Michel Deziderio - Senior Software Engineer">
   <meta property="og:url" content="https://www.micheldeziderio.com.br" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Michel Deziderio - DESENVOLVEDOR FRONT-END" />
+  <meta property="og:title" content="Michel Deziderio - Senior Software Engineer" />
   <meta property="og:description"
-    content="Michel Deziderio, Portfólio, Trabalhos, Wordpress, HTML5, CSS3, Javascript, JS, JQuery, Git, Developer, Desenvolvedor Front-End, Back-End, Artigos, Desenvolvimento de Templates, Criação de Sites." />
+    content="Portfólio de Michel Deziderio, Senior Software Engineer especializado em Angular, TypeScript, UI Engineering e SaaS." />
   <meta property="og:image" content="assets/img/foto.jpg" />
-  <link rel="shortcut icon" href="assets/img/foto.jpg" type="img/x-icon">
+  <link rel="shortcut icon" href="assets/images/foto.jpg" type="img/x-icon">
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
-  <title>Michel Deziderio - Desenvolvedor Front-End</title>
-
-  <!-- Custom fonts for this template -->
-  <link rel="stylesheet" href="assets/css/bootstrap.css">
-  <link rel="stylesheet" href="assets/components/css/devicons/css/devicons.min.css">
-  <link rel="stylesheet" href="assets/components/css/fontawesome/css/all.min.css">
-
-  <!-- Custom styles for this template -->
-  <link rel="stylesheet" href="assets/css/app.css">
-
-  <style>
-    .date-post {
-      font-size: 10px;
-      right: 0px;
-      margin-top: -39px;
-      background-color: #333;
-      padding: 4px 9px;
-      color: #fff;
-      position: absolute;
-      border-radius: 5px 0px 0px 0px;
-    }
-  </style>
-
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/libs/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/libs/devicon.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body data-spy="scroll" data-target="#navbar-page">
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home">
+      <span class="brand-icon">&lt;/&gt;</span>
+      <strong>Michel Deziderio</strong>
+    </a>
 
-  <header class="sticky-top">
-    <div class="suspense-menu animated">
+    <button class="menu-button" id="menuButton" aria-label="Abrir menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
 
-      <div class="container">
-        <div class="row">
-
-          <div class="col-md-12">
-            <div class="menu">
-
-              <div class="row">
-
-                <div class="col-md-6 col-8">
-                  <div class="brand">
-                    <h1>
-                      Michel
-                    </h1>
-                  </div>
-                </div>
-
-                <div class="col-md-6 col-4 d-flex justify-content-end">
-                  <div class="open-menu">
-                    <a href="javascript:void(0)" class="jsClose">
-                      FECHAR
-                      <span></span>
-                    </a>
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-        <div class="row align-self-center">
-
-          <div class="col-md-12 menu-open d-flex justify-content-center" id="navbar-page">
-
-            <div class="links">
-
-              <a class="jsClose nav-link" href="#about">Sobre</a>
-              <a class="jsClose nav-link" href="#experience">Experiência</a>
-              <a class="jsClose nav-link" href="#formation">Formação</a>
-              <a class="jsClose nav-link" href="#archives">Artigos</a>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 col-4 d-flex justify-content-start">
-          </div>
-          <div class="col-md-6 col-8 d-flex justify-content-end">
-            <a href="https://www.linkedin.com/in/michel-deziderio-e-silva-a8642573/" target="_blank" class="box-social">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-
-            <a href="https://codepen.io/micheldeziderio" target="_blank" class="box-social">
-              <i class="fab fa-codepen"></i>
-            </a>
-
-            <a href="https://github.com/micheldeziderio" target="_blank" class="box-social">
-              <i class="fab fa-github-alt"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="container disabled-Open animated">
-      <div class="row">
-
-        <div class="col-md-12">
-          <div class="menu">
-
-            <div class="row">
-
-              <div class="col-md-6 col-8">
-                <div class="brand wow slideInDown">
-                  <h1>
-                    Michel
-                  </h1>
-                </div>
-              </div>
-
-              <div class="col-md-6 col-4 d-flex justify-content-end">
-                <div class="open-menu wow fadeIn">
-                  <a href="javascript:void(0)" class="jsOpen">
-                    MENU
-                    <span></span>
-                  </a>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
+    <nav class="nav" id="nav">
+      <a href="#home" class="active">Início</a>
+      <a href="#experience">Experiência</a>
+      <a href="#skills">Habilidades</a>
+      <a href="#projects">Projetos</a>
+      <a href="#education">Formação</a>
+      <a href="#articles">Artigos</a>
+      <a href="#contact">Contato</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </nav>
   </header>
 
   <main>
-    <section class="md-about d-flex align-items-center" id="about">
-      <div class="container">
-        <div class="row ">
-          <div class="col-md-4">
-            <figure class="md-profile">
-              <img src="assets/img/foto.jpg" alt="Michel Deziderio">
-            </figure>
-          </div>
-          <div class="col-md-12">
-            <h2 class="brand-name wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-              Deziderio Front-End
-            </h2>
-          </div>
+    <section class="hero section" id="home">
+      <div class="hero-photo reveal">
+        <img src="assets/images/foto.jpg" alt="Michel Deziderio">
+        <span class="status-dot"></span>
+      </div>
 
-          <div class="col-lg-12">
-            <div class="mini-about wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-              <h4>
-                Minha trajetória profissional na área de TI, com foco em Front-End e Full-Stack
-                TypeScript, se estende por mais de 15 anos, durante os quais me dediquei à criação de
-                sistemas (SaaS), websites completamente responsivos e Single Page Applications (SPAs).
-                Ao longo desse período, tenho buscado constantemente aprimorar minhas habilidades e
-                conhecimentos, entregando soluções inovadoras e de alta qualidade para atender às
-                necessidades da área de negócio e usuários finais.
-              </h4>
+      <div class="hero-content reveal">
+        <span class="eyebrow">Senior Software Engineer</span>
+        <h2>Angular • TypeScript • UI Engineering • SaaS</h2>
+        <p>
+          Minha trajetória profissional na área de TI tem foco em Front-End e Full-Stack TypeScript,
+          construindo soluções modernas, escaláveis e com ótima experiência do usuário. Atuo na criação
+          de sistemas de gestão, portais corporativos, dashboards e produtos digitais orientados a negócio.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">Ver projetos <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#contact" class="btn btn-outline">Entrar em contato <i class="fa-regular fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <aside class="about-card reveal">
+        <h3>Sobre mim</h3>
+        <div class="about-list">
+          <div class="about-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Localização</strong>
+              <span>Brasil / Remoto</span>
             </div>
           </div>
-
-          <div class="col-lg-12">
-            <a href="https://www.linkedin.com/in/michel-deziderio-e-silva-a8642573/" target="_blank" class="box-social">
-              <i class="fab fa-linkedin-in wow bounceIn" data-wow-duration="1s" data-wow-delay="0.5s"></i>
-            </a>
-
-            <a href="https://codepen.io/micheldeziderio" target="_blank" class="box-social">
-              <i class="fab fa-codepen wow bounceIn" data-wow-duration="1s" data-wow-delay="1s"></i>
-            </a>
-
-            <a href="https://github.com/micheldeziderio" target="_blank" class="box-social">
-              <i class="fab fa-github-alt wow bounceIn" data-wow-duration="1s" data-wow-delay="1.3s"></i>
-            </a>
-
+          <div class="about-item">
+            <i class="fa-solid fa-briefcase"></i>
+            <div>
+              <strong>Experiência</strong>
+              <span>15+ anos</span>
+            </div>
           </div>
+          <div class="about-item">
+            <i class="fa-solid fa-bolt"></i>
+            <div>
+              <strong>Foco</strong>
+              <span>Angular, TypeScript e UI</span>
+            </div>
+          </div>
+          <div class="about-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <strong>Contato</strong>
+              <span>
+                <a href="https://github.com/MichelDeziderio" target="_blank" aria-label="GitHub">
+                  GitHub
+                </a>
+                /
+                <a href="https://www.linkedin.com/in/michel-deziderio-e-silva-a8642573/" target="_blank"
+                  aria-label="LinkedIn">LinkedIn</a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
 
+    <section class="stats section reveal">
+      <article>
+        <i class="fa-regular fa-calendar"></i>
+        <strong>15+</strong>
+        <span>Anos de experiência</span>
+      </article>
+      <article>
+        <i class="fa-solid fa-code"></i>
+        <strong>20+</strong>
+        <span>Projetos entregues</span>
+      </article>
+      <article>
+        <i class="fa-solid fa-cube"></i>
+        <strong>10+</strong>
+        <span>Tecnologias</span>
+      </article>
+      <article>
+        <i class="fa-regular fa-star"></i>
+        <strong>100%</strong>
+        <span>Foco em qualidade</span>
+      </article>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="section-title reveal">
+        <h2>Experiência</h2>
+        <span></span>
+      </div>
+
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <section class="section cards-area reveal" id="skills">
+      <article class="info-card stack-card">
+        <h3><i class="fa-solid fa-icons"></i> Stack & Ferramentas</h3>
+
+        <div class="tabs">
+          <button class="tech-filter active" onclick="filterStack('frontend', this)">Frontend</button>
+          <button class="tech-filter" onclick="filterStack('backend', this)">Backend</button>
+          <button class="tech-filter" onclick="filterStack('mobile', this)">Mobile</button>
+          <button class="tech-filter" onclick="filterStack('cloud', this)">Cloud</button>
+          <button class="tech-filter" onclick="filterStack('tools', this)">Outros</button>
         </div>
 
+        <div class="tech-grid">
 
+          <div class="tech-item frontend"><i class="devicon-angularjs-plain colored"></i><span>Angular</span></div>
+          <div class="tech-item frontend"><i class="devicon-typescript-plain colored"></i><span>TypeScript</span></div>
+          <div class="tech-item frontend"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+          <div class="tech-item frontend"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+          <div class="tech-item frontend"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+          <div class="tech-item frontend"><i class="devicon-sass-original colored"></i><span>Sass</span></div>
+          <div class="tech-item frontend"><i class="devicon-tailwindcss-original colored"></i><span>Tailwind</span>
+          </div>
+          <div class="tech-item frontend"><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></div>
+          <div class="tech-item frontend"><i class="devicon-react-original colored"></i><span>React</span></div>
+          <div class="tech-item frontend"><i class="devicon-rxjs-plain colored"></i><span>RxJS</span></div>
+          <div class="tech-item frontend"><i class="devicon-materialui-plain colored"></i><span>Material UI</span></div>
+
+          <!-- Back-end -->
+          <div class="tech-item backend"><i class="devicon-nestjs-plain colored"></i><span>NestJS</span>
+          </div>
+          <div class="tech-item backend"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></div>
+          <div class="tech-item backend"><i class="devicon-express-original colored"></i><span>Express</span></div>
+          <div class="tech-item backend"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+
+          <!-- Banco de Dados -->
+          <div class="tech-item database"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span>
+          </div>
+          <div class="tech-item database"><i class="devicon-mysql-plain colored"></i><span>MySQL</span>
+          </div>
+
+          <!-- Cloud & DevOps -->
+          <div class="tech-item cloud"><i class="devicon-amazonwebservices-plain-wordmark colored"></i><span>AWS</span>
+          </div>
+          <div class="tech-item cloud"><i class="devicon-docker-plain colored"></i><span>Docker</span></div>
+          <div class="tech-item cloud"><i class="devicon-firebase-plain colored"></i><span>Firebase</span>
+          </div>
+
+          <!-- Mobile -->
+          <div class="tech-item mobile"><i class="devicon-swift-plain colored"></i><span>Swift</span></div>
+
+          <!-- Ferramentas -->
+          <div class="tech-item tools"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+          <div class="tech-item tools"><i class="devicon-github-original colored"></i><span>GitHub</span>
+          </div>
+          <div class="tech-item tools"><i class="devicon-jest-plain colored"></i><span>Jest</span></div>
+          <div class="tech-item tools"><i class="devicon-vitejs-plain colored"></i><span>Vite</span></div>
+          <div class="tech-item tools"><i class="devicon-figma-plain colored"></i><span>Figma</span></div>
+          <div class="tech-item tools"><i class="devicon-wordpress-plain colored"></i><span>WordPress</span>
+          </div>
+          <div class="tech-item tools"><i class="devicon-woocommerce-plain colored"></i><span>WooCommerce</span></div>
+          <div class="tech-item tools"><i class="devicon-linux-plain colored"></i><span>Linux</span></div>
+        </div>
+      </article>
+
+      <article class="info-card">
+        <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Minha abordagem</h3>
+        <ul class="icon-list">
+          <li><i class="fa-solid fa-code"></i>Código limpo e escalável</li>
+          <li><i class="fa-solid fa-gauge-high"></i>Foco em performance e UX</li>
+          <li><i class="fa-solid fa-cubes"></i>Componentização e reutilização</li>
+          <li><i class="fa-solid fa-vial-circle-check"></i>Testes e qualidade de código</li>
+          <li><i class="fa-solid fa-users"></i>Colaboração e comunicação</li>
+        </ul>
+      </article>
+
+      <article class="info-card">
+        <h3><i class="fa-solid fa-layer-group"></i> Outros conhecimentos</h3>
+        <ul class="icon-list">
+          <li><i class="fa-solid fa-network-wired"></i>REST / GraphQL / gRPC</li>
+          <li><i class="devicon-amazonwebservices-plain"></i>AWS Cognito, S3 e CloudFront</li>
+          <li><i class="fa-solid fa-diagram-project"></i>Micro-frontends</li>
+          <li><i class="fa-solid fa-pen-ruler"></i>Design Systems</li>
+          <li><i class="devicon-githubactions-plain"></i>CI/CD GitHub Actions</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-row reveal">
+        <div class="section-title">
+          <h2>Projetos do GitHub</h2>
+          <span></span>
+        </div>
+        <a href="https://github.com/MichelDeziderio" target="_blank" class="view-all">
+          <i class="fa-brands fa-github"></i> Ver todos no GitHub <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <div class="loading-card">Carregando projetos...</div>
       </div>
     </section>
 
-    <section class="md-experience" id="experience">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="md-exp-title">
-              <h3>
-                Experiência
-              </h3>
-            </div>
-          </div>
+    <section id="education" class="section reveal">
+      <div class="section section-title">
+        <h2>Formação & Certificações</h2>
+        <span></span>
+      </div>
+
+      <div class="education-grid"></div>
+    </section>
+
+    <section class="section" id="articles">
+      <div class="section-row reveal">
+        <div class="section-title">
+          <h2>Artigos recentes</h2>
+          <span></span>
         </div>
-        <div class="row">
-          <div class="col-lg-12 mx-auto">
+        <a href="https://medium.com/@micheldeziderio" target="_blank" class="view-all">
+          Ver todos no Medium <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
 
-            <ol class="timeline">
-
-              <li class="timeline-element wow fadeInUp">
-                <h6 class="font-weight-bold dark-grey-text mb-3">INSTRUTOR DE CURSOS</h6>
-                <h6 class="font-weight-bold dark-grey-text mb-3">ALURA</h6>
-                <p class="grey-text font-small">Janeiro 2026 - Atualmente</p>
-                <p class="text-muted">
-                  Instrutor de Desenvolvimento Front-End com Angular 21, focado em arquitetura escalável,
-                   Reactive Forms, tipagem forte e boas práticas.<br>
-                  Ensino Angular do nível júnior ao sênior, abordando fundamentos e padrões avançados usados
-                   em projetos corporativos, com ênfase em código organizado, manutenível e aplicado ao mundo real.<br>
-                  Ensino Angular como ele é usado no mercado — não apenas como funciona.
-                </p>
-              </li>
-              
-              <li class="timeline-element wow fadeInUp">
-                <h6 class="font-weight-bold dark-grey-text mb-3">DESENVOLVEDOR FRONT-END SÊNIOR</h6>
-                <h6 class="font-weight-bold dark-grey-text mb-3">GFT TECHNOLOGIES SE</h6>
-                <p class="grey-text font-small">Agosto 2024 - Atualmente</p>
-                <p class="text-muted">
-                  Modernização do portal do cliente legado para a nova cara utilizando serviços na
-                  nuvem da AWS, utilizando do cognito para fazer autenticações,
-                  criando micro-frontends de alta perfomance com o Angular 19+.
-                </p>
-              </li>
-
-              <li class="timeline-element wow fadeInUp">
-                <h6 class="font-weight-bold dark-grey-text mb-3">DESENVOLVEDOR FRONT-END SÊNIOR</h6>
-                <h6 class="font-weight-bold dark-grey-text mb-3">RABBOT</h6>
-                <p class="grey-text font-small">Outubro 2023 - Julho 2024</p>
-                <p class="text-muted">
-                  Encarregado de atualizar e redesenhar uma aplicação Angular existente para a versão
-                  16, além de escalá-la com micro-frontends.<br>
-                  Liderança na criação do design system, com o desenvolvimento de novos componentes
-                  alinhados às diretrizes dos Product Designers.<br>
-                  Implementação de endpoints no BFF em NestJs, com destaque para a integração dos
-                  serviços com GRPC.
-                </p>
-              </li>
-
-              <li class="timeline-element wow fadeInUp">
-                <h6 class="font-weight-bold dark-grey-text mb-3">DESENVOLVEDOR FRONT-END SÊNIOR</h6>
-                <h6 class="font-weight-bold dark-grey-text mb-3">CONQUEST ONE - ESPECIALISTA DE STAFFING
-                  EM TI</h6>
-                <p class="grey-text font-small">Março 2023 - Agosto 2023</p>
-                <p class="text-muted">
-                  Contribuição significativa na implementação do MFA (Autenticação Multifator) e na
-                  introdução de novas camadas de segurança no Portal do Cliente da Guide
-                  Investimentos.<br>
-                  Desenvolvimento de um módulo de BackOffice para gerenciamento de clientes com e sem
-                  MFA, além de criação de novos componentes para aprimorar o design system dos
-                  projetos internos.
-                </p>
-              </li>
-
-              <li class="timeline-element wow fadeInUp">
-                <h6 class="font-weight-bold dark-grey-text mb-3">DESENVOLVEDOR FRONT-END SÊNIOR</h6>
-                <h6 class="font-weight-bold dark-grey-text mb-3">CONQUEST ONE - ESPECIALISTA DE STAFFING
-                  EM TI</h6>
-                <p class="grey-text font-small">Novembro 2022 - Fevereiro 2023</p>
-                <p class="text-muted">
-                  Utilização do React para criar novos componentes, desenvolvimento de uma biblioteca
-                  de design system e melhoria da experiência do usuário nos portais.
-                </p>
-              </li>
-
-              <li class="timeline-element wow fadeInUp">
-                <h6 class="font-weight-bold dark-grey-text mb-3">DESENVOLVEDOR FRONT-END SÊNIOR</h6>
-                <h6 class="font-weight-bold dark-grey-text mb-3">GUIDE INVESTIMENTOS</h6>
-                <p class="grey-text font-small">Janeiro 2022 - Novembro 2022</p>
-                <p class="text-muted">
-                  Liderança no desenvolvimento do Portal do Cliente, incluindo a implementação de
-                  novas funcionalidades como campanhas e central de notificações.<br>
-                  Foco em melhorias de usabilidade para o cliente e ajustes no app nativo Swift.
-                </p>
-              </li>
-
-              <li class="timeline-element wow fadeInUp">
-                <h6 class="font-weight-bold dark-grey-text mb-3">DESENVOLVEDOR FRONT-END SÊNIOR</h6>
-                <h6 class="font-weight-bold dark-grey-text mb-3">CONQUEST ONE - ESPECIALISTA DE STAFFING
-                  EM TI</h6>
-                <p class="grey-text font-small">Março 2020 - Dezembro 2021</p>
-                <p class="text-muted">
-                  Atuação na Guide Investimentos com Angular, serviços de back-end em NodeJs e ajustes
-                  no app nativo Swift.
-                </p>
-              </li>
-
-              <li class="timeline-element wow fadeInUp">
-                <h6 class="font-weight-bold dark-grey-text mb-3">DESENVOLVEDOR FRONT-END PLENO</h6>
-                <h6 class="font-weight-bold dark-grey-text mb-3">FCAMARA CONSULTING & TRAINING</h6>
-                <p class="grey-text font-small">Junho 2019 - Março 2020</p>
-                <p class="text-muted">
-                  Desenvolvimento de Dashboards de BI para clientes utilizando uma variedade de
-                  tecnologias, incluindo HTML5, CSS3, Sass, Typescript, Angular CLI, Highchart,
-                  Chart.Js e GoogleChart.<br>
-                  Trabalho realizado para empresas de renome como Leroy Merlin, Itau Latam, Volkswagen
-                  e para o grupo FCA.
-                </p>
-              </li>
-
-              <li class="timeline-element wow fadeInUp">
-                <h6 class="font-weight-bold dark-grey-text mb-3">DESENVOLVEDOR FRONT-END</h6>
-                <h6 class="font-weight-bold dark-grey-text mb-3">DEGRAU PUBLICIDADE E INTERNET</h6>
-                <p class="grey-text font-small">Dezembro 2017 - Maio 2019</p>
-                <p class="text-muted">
-                  Responsável pela criação de sites responsivos, Landing Pages e manutenção de sites
-                  em Wordpress, Asp.Net e HTML5.<br>
-                  Experiência em SEO e marketing em mídias digitais, incluindo Facebook, Google+ e
-                  E-mail Marketing.
-                </p>
-              </li>
-
-              <li class="timeline-element wow fadeInUp">
-                <h6 class="font-weight-bold dark-grey-text mb-3">WEB DESIGNER</h6>
-                <h6 class="font-weight-bold dark-grey-text mb-3">S.B.D.T.F.P</h6>
-                <p class="grey-text font-small">Abril de 2008 - Novembro de 2016</p>
-                <p class="text-muted">
-                  Desenvolvimento de sites responsivos, Landing Pages e experiência em SEO.<br>
-                  Atuação em estratégias de marketing digital, incluindo campanhas em mídias sociais e
-                  E-mail Marketing.
-                </p>
-              </li>
-
-
-            </ol>
-
-          </div>
-        </div>
+      <div class="articles-grid" id="articlesGrid">
+        <div class="loading-card">Carregando artigos...</div>
       </div>
     </section>
 
-    <section class="md-formation" id="formation">
-      <div class="container">
+    <section class="cta section reveal" id="contact">
+      <div>
+        <h2>Vamos construir algo incrível juntos?</h2>
+        <p>Estou sempre aberto a novos desafios e oportunidades.</p>
+        <a href="https://www.linkedin.com/in/michel-deziderio-e-silva-a8642573/" target="_blank"
+          class="btn btn-primary">Entrar em contato <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
 
-        <div class="row">
-          <div class="col-md-12">
-            <div class="md-fmt-title">
-              <h3 class="wow fadeInUp">
-                Formação / Cursos
-              </h3>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <ul class="md-list-formation">
-              <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
-                <i class="fa fa-trophy text-warning"></i>
-                Análise e Desenvolvimento de Sistemas | Faculdade Impacta
-              </li>
-              <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
-                <i class="fa fa-trophy text-warning"></i>
-                Node.js Microservices: NestJS, RabbitMQ and Cloud Services | Udemy Academy
-              </li>
-              <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
-                <i class="fa fa-trophy text-warning"></i>
-                Desenvolvimento iOS 11 Swift 4 | Udemy Academy
-              </li>
-              <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s">
-                <i class="fa fa-trophy text-warning"></i>
-                Iniciando com NodeJS (MongoDB, Express, Nodemon e RealTime) | Udemy Academy
-              </li>
-              <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.8s">
-                <i class="fa fa-trophy text-warning"></i>
-                Angular para Construção de Web Apps | Caelum Ensino e Inovação
-              </li>
-              <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.9s">
-                <i class="fa fa-trophy text-warning"></i>
-                Cusrso React.js Ninja: Modulo React + Webpack | Udemy Academy
-              </li>
-              <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
-                <i class="fa fa-trophy text-warning"></i>
-                Criando Aplicação do zero com Angular CLI 6 e GraphQl | Udemy Academy
-              </li>
-            </ul>
-          </div>
-        </div>
+      <div class="contact-list">
+        <p><i class="fa-solid fa-location-dot"></i> Brasil / Remoto</p>
+      </div>
 
-        <div class="row">
-          <div class="col-md-12">
-            <div class="md-hbl-title">
-              <h3 class="wow fadeInUp">
-                Habilidades
-              </h3>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <h5 class="wow fadeInUp">
-              Stacks / Ferramentas
-            </h5>
-          </div>
-          <div class="col-md-12">
-            <ul class="list-inline list-icons md-list-stack">
-              <li class="list-inline-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s"
-                title="Angular CLI">
-                <i class="devicons devicons-angular"></i>
-              </li>
-              <li class="list-inline-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s"
-                title="Visual Studio Code">
-                <i class="devicons devicons-visualstudio"></i>
-              </li>
-              <li class="list-inline-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" title="HTML5">
-                <i class="devicons devicons-html5"></i>
-              </li>
-              <li class="list-inline-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" title="CSS3">
-                <i class="devicons devicons-css3"></i>
-              </li>
-              <li class="list-inline-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" title="JavaScript">
-                <i class="devicons devicons-javascript"></i>
-              </li>
-              <li class="list-inline-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" title="JQuery">
-                <i class="devicons devicons-jquery"></i>
-              </li>
-              <li class="list-inline-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" title="Sass">
-                <i class="devicons devicons-sass"></i>
-              </li>
-              <li class="list-inline-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" title="Bootstrap">
-                <i class="devicons devicons-bootstrap"></i>
-              </li>
-              <li class="list-inline-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" title="Node.Js">
-                <i class="devicons devicons-nodejs"></i>
-              </li>
-              <li class="list-inline-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" title="MySql">
-                <i class="devicons devicons-mysql"></i>
-              </li>
-              <li class="list-inline-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" title="Bitbucket">
-                <i class="devicons devicons-bitbucket"></i>
-              </li>
-              <li class="list-inline-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" title="Git">
-                <i class="devicons devicons-git"></i>
-              </li>
-              <li class="list-inline-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" title="Swift">
-                <i class="devicons devicons-swift"></i>
-              </li>
-              <li class="list-inline-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" title="Jira">
-                <i class="devicons devicons-jira"></i>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-12">
-            <h5 class="wow fadeInUp">
-              Fluxo de trabalho
-            </h5>
-          </div>
-          <div class="col-md-12">
-            <ul class="md-list-flow">
-              <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
-                <i class="fa fa-check"></i>
-                Mobile-First, Design Responsivo
-              </li>
-              <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s">
-                <i class="fa fa-check"></i>
-                Cross Browser Teste Debugando
-              </li>
-              <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.8s">
-                <i class="fa fa-check"></i>
-                Equipes multifuncionais
-              </li>
-              <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
-                <i class="fa fa-check"></i>
-                Desenvolvimento Ágil Organizado
-              </li>
-            </ul>
-          </div>
-        </div>
+      <div class="social-links">
+        <a href="https://github.com/MichelDeziderio" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/michel-deziderio-e-silva-a8642573/" target="_blank"><i
+            class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://medium.com/@micheldeziderio" target="_blank"><i class="fa-brands fa-medium"></i></a>
       </div>
     </section>
-
-    <section class="md-posts" id="archives">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="md-posts-title">
-              <h3>
-                Artigos / Tutoriais
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div class="row" id="getPosts">
-
-        </div>
-      </div>
-    </section>
-
-    <!-- <section class="md-repos" id="repository">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="md-repos-title">
-                            <h3>
-                                Repositiórios / Github
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" id="getRepositorys">
-
-                </div>
-            </div>
-        </section> -->
-
   </main>
 
-  <footer>
+  <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
-    <div class="container">
-      <div class="row">
-
-        <div class="col-md-12">
-          <div class="copyrights text-center">
-            <p>
-              Michel Deziderio
-            </p>
-          </div>
-
-          <a href="javascript:void(0)" class="anchor jsAnchor">Top</a>
-        </div>
-
-      </div>
-    </div>
-
-  </footer>
-
-
-
-  <div class="modal" tabindex="-1" role="dialog" id="mrRobot">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-body">
-          <img src="assets/img/mr-robot-img.jpg" data-src="assets/img/mr-robot-img.jpg" alt="">
-        </div>
-        <div class="modalAudio">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="assets/js/jquery-2.2.4.min.js"></script>
-  <script src="assets/components/js/bootstrap.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="assets/components/js/wow.min.js"></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="assets/js/app.js"></script>
-  <script src="assets/js/lazyload-images-post.js"></script>
-
-  <script>
-    new WOW().init();
-  </script>
-
-
+  <script src="assets/js/script.js"></script>
 </body>
 
 </html>
