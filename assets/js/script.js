@@ -342,7 +342,7 @@ async function fetchMediumPosts() {
     const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@micheldeziderio');
     const data = await response.json();
 
-    articlesGrid.innerHTML = data.items.slice(0, 5).map(post => {
+    articlesGrid.innerHTML = data.items.slice(0, 8).map(post => {
       const image = getThumbnail(post.content) || 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop';
       const cleanDescription = post.description.replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ').trim();
       const date = new Date(post.pubDate).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' });
