@@ -537,14 +537,14 @@ const educationItems = [
     description: 'Formação voltada para engenharia de software, arquitetura de sistemas, banco de dados, desenvolvimento web e boas práticas de programação.'
   },
   {
-    icon: 'fa-brands fa-node-js',
-    title: 'Node.js Microservices: NestJS, RabbitMQ and Cloud Services',
+    icon: 'fa-brands fa-aws',
+    title: 'AWS Terraform',
     institution: 'Impacta',
     description: 'Terraform na AWS: HCL, providers, state, módulos, variáveis, loops, validações e gestão de recursos.'
   },
   {
-    icon: 'fa-brands fa-aws',
-    title: 'AWS Terraform',
+    icon: 'fa-brands fa-node-js',
+    title: 'Node.js Microservices: NestJS, RabbitMQ and Cloud Services',
     institution: 'Udemy Academy',
     description: 'Arquitetura de microsserviços utilizando NestJS, mensageria com RabbitMQ e integração com serviços em nuvem.'
   },
