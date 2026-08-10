@@ -1,26 +1,7 @@
 
 const experiences = [
   {
-    role: 'Instrutor de Cursos',
-    company: 'Alura',
-    period: 'Janeiro 2026 - Atualmente',
-    description: [
-      'Instrutor de Desenvolvimento Front-End com Angular 21, focado em arquitetura escalável, Reactive Forms, tipagem forte e boas práticas. Ensino Angular do nível júnior ao sênior, abordando fundamentos e padrões avançados usados em projetos corporativos.'
-    ],
-    stack: [
-      'Angular 21',
-      'TypeScript',
-      'RxJS',
-      'Signals',
-      'Reactive Forms',
-      'Standalone Components',
-      'Jest',
-      'Arquitetura Front-End',
-      'Design Patterns'
-    ]
-  },
-  {
-    role: 'Desenvolvedor Front-End Sênior',
+    role: 'Front-End Engineer',
     company: 'GFT Technologies SE',
     period: 'Agosto 2024 - Atualmente',
     description: [
@@ -40,7 +21,26 @@ const experiences = [
     ]
   },
   {
-    role: 'Desenvolvedor Front-End Sênior',
+    role: 'Instrutor de Cursos',
+    company: 'Alura',
+    period: 'Janeiro 2026 - Fevereiro 2026',
+    description: [
+      'Instrutor de Desenvolvimento Front-End com Angular 21, focado em arquitetura escalável, Reactive Forms, tipagem forte e boas práticas. Ensino Angular do nível júnior ao sênior, abordando fundamentos e padrões avançados usados em projetos corporativos.'
+    ],
+    stack: [
+      'Angular 21',
+      'TypeScript',
+      'RxJS',
+      'Signals',
+      'Reactive Forms',
+      'Standalone Components',
+      'Jest',
+      'Arquitetura Front-End',
+      'Design Patterns'
+    ]
+  },
+  {
+    role: 'Front-End Engineer',
     company: 'Rabbot',
     period: 'Outubro 2023 - Julho 2024',
     description: [
@@ -59,7 +59,7 @@ const experiences = [
     ]
   },
   {
-    role: 'Desenvolvedor Front-End Sênior',
+    role: 'Front-End Engineer',
     company: 'Conquest One - Especialista de Staffing em TI',
     period: 'Março 2023 - Agosto 2023',
     description: [
@@ -78,7 +78,7 @@ const experiences = [
     ]
   },
   {
-    role: 'Desenvolvedor Front-End Sênior',
+    role: 'Front-End Engineer',
     company: 'Conquest One - Especialista de Staffing em TI',
     period: 'Novembro 2022 - Fevereiro 2023',
     description: [
@@ -96,7 +96,7 @@ const experiences = [
     ]
   },
   {
-    role: 'Desenvolvedor Front-End Sênior',
+    role: 'Front-End Engineer',
     company: 'Guide Investimentos',
     period: 'Janeiro 2022 - Novembro 2022',
     description: [
@@ -539,6 +539,12 @@ const educationItems = [
   {
     icon: 'fa-brands fa-node-js',
     title: 'Node.js Microservices: NestJS, RabbitMQ and Cloud Services',
+    institution: 'Impacta',
+    description: 'Terraform na AWS: HCL, providers, state, módulos, variáveis, loops, validações e gestão de recursos.'
+  },
+  {
+    icon: 'fa-brands fa-aws',
+    title: 'AWS Terraform',
     institution: 'Udemy Academy',
     description: 'Arquitetura de microsserviços utilizando NestJS, mensageria com RabbitMQ e integração com serviços em nuvem.'
   },
