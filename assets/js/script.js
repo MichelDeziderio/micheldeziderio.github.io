@@ -426,24 +426,46 @@ async function getMediumPosts() {
   throw new Error('Nao foi possivel acessar o feed do Medium pelos proxies.');
 }
 
+function escapeMediumHTML(value) {
+  return String(value ?? '').replace(/[&<>"']/g, char => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  })[char]);
+}
+
+function safeMediumURL(value) {
+  try {
+    const url = new URL(value);
+    return ['http:', 'https:'].includes(url.protocol) ? escapeMediumHTML(url.href) : '';
+  } catch {
+    return '';
+  }
+}
+
 async function fetchMediumPosts() {
   try {
     const data = { items: await getMediumPosts() };
 
     articlesGrid.innerHTML = data.items.slice(0, 8).map(post => {
-      const image = getThumbnail(post.content) || 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop';
-      const cleanDescription = post.description.replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ').trim();
+      const image = safeMediumURL(getThumbnail(post.content)) || 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop';
+      const link = safeMediumURL(post.link) || 'https://medium.com/@micheldeziderio';
+      const title = escapeMediumHTML(post.title);
+      const descriptionDoc = new DOMParser().parseFromString(post.description, 'text/html');
+      const cleanDescription = (descriptionDoc.body.textContent || '').replace(/\s+/g, ' ').trim();
       const date = new Date(post.pubDate).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' });
 
       return `
         <article class="article-card reveal">
-          <a href="${post.link}" target="_blank">
+          <a href="${link}" target="_blank" rel="noopener noreferrer">
             <div class="article-cover">
-              <img src="${image}" alt="${post.title}">
+              <img src="${image}" alt="${title}" loading="lazy">
             </div>
             <div class="card-body">
-              <h3>${post.title}</h3>
-              <p>${cleanDescription.slice(0, 95)}...</p>
+              <h3>${title}</h3>
+              <p>${escapeMediumHTML(cleanDescription.slice(0, 95))}${cleanDescription.length > 95 ? '...' : ''}</p>
               <div class="article-meta">
                 <span><i class="fa-regular fa-clock"></i> ${estimateReadingTime(post.content)} min de leitura</span>
                 <span>${date}</span>
