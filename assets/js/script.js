@@ -337,10 +337,98 @@ function getThumbnail(content) {
   return firstImageUrl;
 }
 
+
+// O Medium nao libera CORS para o navegador. Os proxies retornam o XML original;
+// a conversao do RSS para objetos JavaScript acontece aqui, sem rss2json.
+const MEDIUM_FEED_URL = 'https://medium.com/feed/@micheldeziderio';
+const MEDIUM_CACHE_KEY = 'medium-posts-v1';
+const MEDIUM_CACHE_TTL = 6 * 60 * 60 * 1000;
+
+function parseMediumRSS(xml) {
+  const rss = new DOMParser().parseFromString(xml, 'application/xml');
+
+  if (rss.querySelector('parsererror') || !rss.querySelector('rss > channel')) {
+    throw new Error('Resposta recebida nao e um feed RSS valido.');
+  }
+
+  const items = [...rss.querySelectorAll('channel > item')];
+
+  if (!items.length) {
+    throw new Error('O feed do Medium nao retornou artigos.');
+  }
+
+  return items.slice(0, 8).map(item => {
+    const getValue = tag => item.getElementsByTagName(tag)[0]?.textContent?.trim() || '';
+    const content = getValue('content:encoded') || getValue('description');
+
+    return {
+      title: getValue('title'),
+      link: getValue('link'),
+      pubDate: getValue('pubDate'),
+      content,
+      description: getValue('description') || content
+    };
+  });
+}
+
+function readMediumCache() {
+  try {
+    const cache = JSON.parse(localStorage.getItem(MEDIUM_CACHE_KEY));
+    return Array.isArray(cache?.items) && cache.items.length ? cache : null;
+  } catch {
+    return null;
+  }
+}
+
+async function getMediumPosts() {
+  const cached = readMediumCache();
+
+  if (cached && Date.now() - cached.savedAt < MEDIUM_CACHE_TTL) {
+    return cached.items;
+  }
+
+  const proxyUrls = [
+    'https://proxy.cors.dev/' + MEDIUM_FEED_URL,
+    'https://api.allorigins.win/raw?url=' + encodeURIComponent(MEDIUM_FEED_URL)
+  ];
+
+  for (const url of proxyUrls) {
+    try {
+      const response = await fetch(url, {
+        signal: AbortSignal.timeout(12000)
+      });
+
+      if (!response.ok) {
+        throw new Error('HTTP ' + response.status);
+      }
+
+      const posts = parseMediumRSS(await response.text());
+
+      try {
+        localStorage.setItem(MEDIUM_CACHE_KEY, JSON.stringify({
+          savedAt: Date.now(),
+          items: posts
+        }));
+      } catch {
+        // A pagina continua funcionando caso o armazenamento esteja indisponivel.
+      }
+
+      return posts;
+    } catch (error) {
+      console.warn('Falha ao consultar feed do Medium:', error);
+    }
+  }
+
+  if (cached) {
+    return cached.items;
+  }
+
+  throw new Error('Nao foi possivel acessar o feed do Medium pelos proxies.');
+}
+
 async function fetchMediumPosts() {
   try {
-    const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@micheldeziderio');
-    const data = await response.json();
+    const data = { items: await getMediumPosts() };
 
     articlesGrid.innerHTML = data.items.slice(0, 8).map(post => {
       const image = getThumbnail(post.content) || 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop';
